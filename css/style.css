@@ -1,1 +1,268 @@
 @charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+body:before {
+    position: fixed;
+    top: 500px;
+    left: -100px;
+    bottom: 0;
+    content: '';
+    width: 400px;
+    height: 400px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    z-index: -100;
+    transform: rotate(20deg);
+}
+
+body:after {
+    position: fixed;
+    top: -150px;
+    right: -50px;
+    bottom: 0;
+    content: '';
+    width: 400px;
+    height: 600px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    z-index: -100;
+    transform: rotate(-30deg);
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 1px 5px white;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+header nav {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px white;
+}
+
+header nav div,
+header nav ul {
+    display: flex;
+    flex: 1 1 50%;
+}
+
+header nav div {
+    align-items: center;
+}
+
+header nav ul {
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    font-size: small;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color ease-in-out 400ms;
+}
+
+header nav ul li a:hover {
+    color: gray;
+}
+
+header > div {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav div img {
+    width: 60px;
+    margin-left: 40px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    filter: contrast(5) blur(1px) grayscale(1);
+}
+
+header nav div p {
+    
+    font-weight: bold;
+    font-variant: small-caps;
+    padding-left: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header > div h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4rem;
+    font-variant: small-caps;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+section {
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid transparent;
+}
+
+section#projects h2,
+section#about h2 {
+    margin-top: 80px;
+    font-size: 3rem;
+    font-variant: small-caps;
+    color: white;
+    text-align: center;
+}
+
+section#projects article,
+section#about article {
+    display: flex;
+    margin-top: 20vh;
+    flex-wrap: wrap;
+}
+
+.project-tile.right {
+    flex-direction: row-reverse;
+}
+
+section#projects article div:first-child,
+section#about article div:last-child {
+    flex: 1 1 60%;
+}
+
+section#projects article div:first-child img,
+section#about article div:first-child img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+section#about article div:first-child img {
+    filter: grayscale(1);
+}
+
+section#projects article div:last-child,
+section#about article div:first-child {
+    flex: 1 1 40%;
+}
+
+section#projects article div:last-child h3,
+section#about article div:last-child h3 {
+    font-size: 2rem;
+    font-variant: small-caps;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section#projects article div:last-child p,
+section#about article div:last-child p {
+    padding-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+section#projects article div:last-child p::first-letter,
+section#about article div:last-child p::first-letter {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.project-tile.right div:last-child p {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+section#projects article div:last-child div,
+section#about article div:last-child div {
+    margin-top: 50px;
+    text-align: center;
+}
+
+section#projects article div:last-child div a,
+section#about article div:last-child div a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    overflow: hidden;
+    background-color: unset;
+    border: 2px solid white;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-transition: all ease 400ms;
+    transition: all ease 400ms;
+}
+
+section#projects article div:last-child div a::before,
+section#about article div:last-child div a::before {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    background-color: white;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    top: -250px;
+    left: -440px;
+    width: 400px;
+    height: 400px;
+    -webkit-transition: all ease 400ms;
+    transition: all ease 400ms;
+}
+
+section#projects article div:last-child div a span,
+section#about article div:last-child div a span {
+    position: relative;
+    z-index: 2;
+    color: white;
+    -webkit-transition: all ease 400ms;
+    transition: all ease 400ms;
+}
+
+section#projects article div:last-child div a:hover span,
+section#about article div:last-child div a:hover span {
+    color: black;
+}
+
+section#projects article div:last-child div a:hover::before,
+section#about article div:last-child div a:hover::before {
+    left: -200px;
+}
