@@ -433,3 +433,126 @@ footer > div:nth-child(2) div p:nth-child(4) {
     font-weight: bold;
     color: rgba(255, 255, 255, .38);
 }
+
+@media only screen and (max-width: 1279px) {
+    body {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    #navbar div, 
+    #navbar ul {
+        flex-basis: 100%;
+    }
+
+    #navbar div {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    header nav div img, 
+    footer > div:first-child img {
+        width: 40px;
+        margin-left: 0px;
+    }
+
+    header nav div p, 
+    footer > div:first-child p {
+        padding-left: 10px;
+    }
+
+    section:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+
+    section#projects h2, 
+    section#about h2 {
+        margin-top: 110px;
+    }
+
+    section#projects article,
+    section#about article {
+        margin-top: 10vh;
+    }
+     
+    section#projects article div:last-child, 
+    section#about article div:first-child {
+        flex-basis: 100%;
+    }
+
+    section#projects article div:first-child, 
+    section#about article div:last-child {
+        flex-basis: 100%;
+    }
+
+    section#projects article div:last-child h3, 
+    section#about article div:last-child h3 {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    section#projects article div:last-child p, 
+    section#about article div:last-child p {
+        padding-left: 0;
+        text-align: justify;
+        text-indent: 1rem;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    .project-tile.right div:last-child p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    footer > div:nth-child(2) {
+        flex-wrap: wrap;
+    }
+
+    footer > div:nth-child(2) div {
+        flex-basis: 100%;
+    }
+
+    footer > div:nth-child(2) div:not(:first-child) {
+        margin-top: 30px;
+    }
+
+    footer > div:nth-child(1) {
+        margin-top: 110px;
+    }
+
+    footer > div:nth-child(2) div p:nth-child(1) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
+    header > div h1 {
+        font-size: 2.5rem;
+    }
+
+    section#projects h2, 
+    section#about h2 {
+        font-size: 2rem;
+    }
+
+    section#projects article div:last-child h3, 
+    section#about article div:last-child h3 {
+        font-size: 1.5rem;
+    }
+
+    section#projects article div:last-child h3, 
+    section#about article div:last-child h3 {
+        font-size: 2rem;
+    }
+
+    footer > div:nth-child(2) div p:nth-child(1) {
+        font-size: 1rem;
+    }
+}
