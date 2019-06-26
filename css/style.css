@@ -558,27 +558,19 @@ footer > div:nth-child(2) div p:nth-child(4) {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    header > div h1 {
-        font-size: 2.5rem;
-    }
-
-    section#projects h2, 
-    section#about h2 {
-        font-size: 2rem;
+    section#projects article, 
+    section#about article {
+        margin-top: 5vh;
     }
 
     section#projects article div:last-child h3, 
     section#about article div:last-child h3 {
-        font-size: 1.5rem;
-    }
-
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        font-size: 2rem;
+        margin-bottom: 1vh;
     }
 
     footer > div:nth-child(2) div p:nth-child(1) {
-        font-size: 1rem;
+        width: 65px;
+        height: 65px;
     }
 }
 
