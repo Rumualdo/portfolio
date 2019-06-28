@@ -501,8 +501,8 @@ footer > div:nth-child(2) div p:nth-child(4) {
         padding-left: 0;
         text-align: justify;
         text-indent: 1rem;
-        word-wrap: break-word;
-        word-break: break-all;
+        /* word-wrap: break-word;
+        word-break: break-all; */
     }
 
     .project-tile.right div:last-child p {
