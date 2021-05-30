@@ -1,312 +1,270 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
 
 *,
 ::before,
 ::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 body:before {
-    position: fixed;
-    top: 500px;
-    left: -100px;
-    bottom: 0;
-    content: '';
-    width: 400px;
-    height: 400px;
-    border: 2px solid rgba(255, 255, 255, .2);
-    z-index: -100;
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  content: "";
+  height: 400px;
+  left: -100px;
+  position: fixed;
+  top: 500px;
+  transform: rotate(20deg);
+  width: 400px;
+  z-index: -100;
 }
 
 body:after {
-    position: fixed;
-    top: -150px;
-    right: -50px;
-    bottom: 0;
-    content: '';
-    width: 400px;
-    height: 600px;
-    border: 2px solid rgba(255, 255, 255, .2);
-    z-index: -100;
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  content: "";
+  height: 600px;
+  position: fixed;
+  right: -50px;
+  top: -150px;
+  transform: rotate(-30deg);
+  width: 400px;
+  z-index: -100;
 }
 
 header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    -webkit-box-shadow: 0 1px 5px white;
-    box-shadow: 0 1px 5px white;
-    background-color: black;
+  background-color: black;
+  box-shadow: 0 1px 5px white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 header video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 0;
 }
 
 header nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    padding: 10px 20px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), black);
-    -webkit-box-shadow: 0 1px white;
-    box-shadow: 0 1px white;
+  align-items: center;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), black);
+  box-shadow: 0 1px white;
+  display: flex;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 header nav div,
 header nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 50%;
-    flex: 1 1 50%;
+  display: flex;
+  flex: 1 1 50%;
 }
 
 header nav div {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  align-items: center;
 }
 
 header nav ul {
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
 }
 
 header nav ul li a {
-    font-size: small;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    -webkit-transition: color ease-in-out 400ms;
-    transition: color ease-in-out 400ms;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color ease-in-out 400ms;
 }
 
 header nav ul li a:hover {
-    color: gray;
+  color: gray;
 }
 
 header > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100vh;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 header nav div img,
 footer > div:first-child img {
-    width: 60px;
-    margin-left: 40px;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.7);
-    -webkit-filter: contrast(5) blur(1px) grayscale(1);
-    filter: contrast(5) blur(1px) grayscale(1);
+  -webkit-filter: contrast(5) blur(1px) grayscale(1);
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  filter: contrast(5) blur(1px) grayscale(1);
+  margin-left: 40px;
+  width: 60px;
 }
 
 header nav div p,
 footer > div:first-child p {
-
-    font-weight: bold;
-    font-variant: small-caps;
-    padding-left: 30px;
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  font-variant: small-caps;
+  font-weight: bold;
+  padding-left: 30px;
 }
 
 header > div h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 4rem;
-    font-variant: small-caps;
-    color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 4rem;
+  font-variant: small-caps;
+  position: relative;
+  z-index: 2;
 }
 
 section {
-    width: 80%;
-    margin: 50px auto;
-    border: 1px solid transparent;
+  border: 1px solid transparent;
+  margin: 50px auto;
+  width: 80%;
 }
 
 section#projects h2,
 section#about h2 {
-    margin-top: 80px;
-    font-size: 3rem;
-    font-variant: small-caps;
-    color: white;
-    text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-variant: small-caps;
+  margin-top: 80px;
+  text-align: center;
 }
 
 section#projects article,
 section#about article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 20vh;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20vh;
 }
 
 .project-tile.right {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 section#projects article div:first-child,
 section#about article div:last-child {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 60%;
-    flex: 1 1 60%;
+  flex: 1 1 60%;
 }
 
 section#projects article div:first-child img,
 section#about article div:first-child img {
-    display: block;
-    width: 100%;
-    height: auto;
-    -webkit-box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 section#about article div:first-child img {
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 section#projects article div:last-child,
 section#about article div:first-child {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 40%;
-    flex: 1 1 40%;
+  flex: 1 1 40%;
 }
 
 section#projects article div:last-child h3,
 section#about article div:last-child h3 {
-    font-size: 2rem;
-    font-variant: small-caps;
-    color: white;
-    text-align: center;
-    margin-bottom: 50px;
+  color: white;
+  font-size: 2rem;
+  font-variant: small-caps;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 section#projects article div:last-child p,
 section#about article div:last-child p {
-    padding-left: 30px;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.8;
-    letter-spacing: 0.1rem;
-    text-align: center;
-    font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 1.8;
+  padding-left: 30px;
+  text-align: center;
 }
 
 section#projects article div:last-child p::first-letter,
 section#about article div:last-child p::first-letter {
-    font-size: 1.5rem;
-    color: gray;
+  color: gray;
+  font-size: 1.5rem;
 }
 
 .project-tile.right div:last-child p {
-    padding-left: 0;
-    padding-right: 30px;
+  padding-left: 0;
+  padding-right: 30px;
 }
 
 section#projects article div:last-child div,
 section#about article div:last-child div {
-    margin-top: 50px;
-    text-align: center;
+  margin-top: 50px;
+  text-align: center;
 }
 
 section#projects article div:last-child div a,
 section#about article div:last-child div a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    padding: 10px 20px;
-    overflow: hidden;
-    background-color: unset;
-    border: 2px solid white;
-    font-weight: 700;
-    text-transform: uppercase;
-    -webkit-transition: all ease 400ms;
-    transition: all ease 400ms;
+  background-color: unset;
+  border: 2px solid white;
+  display: inline-block;
+  font-weight: 700;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease 400ms;
 }
 
 section#projects article div:last-child div a::before,
 section#about article div:last-child div a::before {
-    position: absolute;
-    z-index: 1;
-    content: "";
-    background-color: white;
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-    top: -250px;
-    left: -440px;
-    width: 400px;
-    height: 400px;
-    -webkit-transition: all ease 400ms;
-    transition: all ease 400ms;
+  background-color: white;
+  content: "";
+  height: 400px;
+  left: -440px;
+  position: absolute;
+  top: -250px;
+  transform: rotateZ(45deg);
+  transition: all ease 400ms;
+  width: 400px;
+  z-index: 1;
 }
 
 section#projects article div:last-child div a span,
 section#about article div:last-child div a span {
-    position: relative;
-    z-index: 2;
-    color: white;
-    -webkit-transition: all ease 400ms;
-    transition: all ease 400ms;
+  color: white;
+  position: relative;
+  transition: all ease 400ms;
+  z-index: 2;
 }
 
 section#projects article div:last-child div a:hover span,
 section#about article div:last-child div a:hover span {
-    color: black;
+  color: black;
 }
 
 section#projects article div:last-child div a:hover::before,
 section#about article div:last-child div a:hover::before {
-    left: -200px;
+  left: -200px;
 }
 
 footer,
@@ -314,291 +272,268 @@ footer > div:nth-child(1),
 footer > div:nth-child(2),
 footer > div:nth-child(2) div,
 footer > div:nth-child(2) div p:nth-child(1) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  display: flex;
 }
 
 footer div {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  align-items: center;
 }
 
 footer > div:nth-child(1),
 footer > div:nth-child(2) {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
 footer > div:nth-child(2) div p a {
-    font-size: small;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    -webkit-transition: color ease-in-out 400ms;
-    transition: color ease-in-out 400ms;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color ease-in-out 400ms;
 }
 
 footer > div:nth-child(2) div p a:hover {
-    color: gray;
+  color: gray;
 }
 
 footer,
 footer > div:nth-child(1) {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  justify-content: center;
 }
 
 footer {
-    min-height: 50vh;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), black);
-    box-shadow: 0 -1px white;
+  align-items: flex-start;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), black);
+  box-shadow: 0 -1px white;
+  flex-wrap: wrap;
+  min-height: 50vh;
 }
 
 footer > div:nth-child(1) {
-    margin: 6vh 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  margin: 6vh 0;
+  user-select: none;
 }
 
 footer > div:nth-child(2) {
-    margin-bottom: 6vh;
+  margin-bottom: 6vh;
 }
 
 footer > div:nth-child(2) div {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 33.33333333%;
-    flex: 1 1 33.33333333%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 1 33.33333333%;
+  justify-content: space-between;
 }
 
 footer > div:nth-child(2) div p {
-    margin-bottom: 2vh;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 footer > div:nth-child(2) div p:nth-child(1) {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    font-size: 2rem;
-    color: white;
-    background-color: rgb(41, 41, 41);
-    border-radius: 50%;
+  align-items: center;
+  background-color: rgb(41, 41, 41);
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
 }
 
 footer > div:nth-child(2) div p a {
-    color: rgba(255, 255, 255, .38);
+  color: rgba(255, 255, 255, 0.38);
 }
 
 footer > div:nth-child(3) p {
-    margin-bottom: 4vh;
-    font-size: x-small;
-    font-weight: bold;
-    color: rgba(255, 255, 255, .38);
+  color: rgba(255, 255, 255, 0.38);
+  font-size: x-small;
+  font-weight: bold;
+  margin-bottom: 4vh;
 }
 
 footer > div:nth-child(2) div p:nth-child(3),
 footer > div:nth-child(2) div p:nth-child(4) {
-    font-size: small;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: rgba(255, 255, 255, .38);
+  color: rgba(255, 255, 255, 0.38);
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1279px) {
-    body {
-        font-size: small;
-    }
+  body {
+    font-size: small;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    header nav {
-        flex-wrap: wrap;
-    }
+  header nav {
+    flex-wrap: wrap;
+  }
 
-    #navbar div, 
-    #navbar ul {
-        flex-basis: 100%;
-    }
+  #navbar div,
+  #navbar ul {
+    flex-basis: 100%;
+  }
 
-    #navbar div {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+  #navbar div {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-    header nav div img, 
-    footer > div:first-child img {
-        width: 40px;
-        margin-left: 0px;
-    }
+  header nav div img,
+  footer > div:first-child img {
+    margin-left: 0px;
+    width: 40px;
+  }
 
-    header nav div p, 
-    footer > div:first-child p {
-        padding-left: 10px;
-    }
+  header nav div p,
+  footer > div:first-child p {
+    padding-left: 10px;
+  }
 
-    section:not(:last-of-type) {
-        margin-bottom: 0;
-    }
+  section:not(:last-of-type) {
+    margin-bottom: 0;
+  }
 
-    section#projects h2, 
-    section#about h2 {
-        margin-top: 110px;
-    }
+  section#projects h2,
+  section#about h2 {
+    margin-top: 110px;
+  }
 
-    section#projects article,
-    section#about article {
-        margin-top: 10vh;
-    }
-     
-    section#projects article div:last-child, 
-    section#about article div:first-child {
-        flex-basis: 100%;
-    }
+  section#projects article,
+  section#about article {
+    margin-top: 10vh;
+  }
 
-    section#projects article div:first-child, 
-    section#about article div:last-child {
-        flex-basis: 100%;
-    }
+  section#projects article div:last-child,
+  section#about article div:first-child {
+    flex-basis: 100%;
+  }
 
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-    }
+  section#projects article div:first-child,
+  section#about article div:last-child {
+    flex-basis: 100%;
+  }
 
-    section#projects article div:last-child p, 
-    section#about article div:last-child p {
-        padding-left: 0;
-        text-align: justify;
-        text-indent: 1rem;
-        /* word-wrap: break-word;
-        word-break: break-all; */
-    }
+  section#projects article div:last-child h3,
+  section#about article div:last-child h3 {
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  }
 
-    .project-tile.right div:last-child p {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  section#projects article div:last-child p,
+  section#about article div:last-child p {
+    padding-left: 0;
+    text-align: justify;
+    text-indent: 1rem;
+    /*
+      word-wrap: break-word;
+      word-break: break-all;
+    */
+  }
 
-    footer > div:nth-child(2) {
-        flex-wrap: wrap;
-    }
+  .project-tile.right div:last-child p {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    footer > div:nth-child(2) div {
-        flex-basis: 100%;
-    }
+  footer > div:nth-child(2) {
+    flex-wrap: wrap;
+  }
 
-    footer > div:nth-child(2) div:not(:first-child) {
-        margin-top: 30px;
-    }
+  footer > div:nth-child(2) div {
+    flex-basis: 100%;
+  }
 
-    footer > div:nth-child(1) {
-        margin-top: 110px;
-    }
+  footer > div:nth-child(2) div:not(:first-child) {
+    margin-top: 30px;
+  }
 
-    footer > div:nth-child(2) div p:nth-child(1) {
-        width: 50px;
-        height: 50px;
-    }
+  footer > div:nth-child(1) {
+    margin-top: 110px;
+  }
+
+  footer > div:nth-child(2) div p:nth-child(1) {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-    header > div h1 {
-        font-size: 2.5rem;
-    }
+  header > div h1 {
+    font-size: 2.5rem;
+  }
 
-    section#projects h2, 
-    section#about h2 {
-        font-size: 2rem;
-    }
+  section#projects h2,
+  section#about h2 {
+    font-size: 2rem;
+  }
 
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        font-size: 1.5rem;
-    }
+  section#projects article div:last-child h3,
+  section#about article div:last-child h3 {
+    font-size: 1.5rem;
+  }
 
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        font-size: 2rem;
-    }
+  section#projects article div:last-child h3,
+  section#about article div:last-child h3 {
+    font-size: 2rem;
+  }
 
-    footer > div:nth-child(2) div p:nth-child(1) {
-        font-size: 1rem;
-    }
+  footer > div:nth-child(2) div p:nth-child(1) {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    section#projects article, 
-    section#about article {
-        margin-top: 5vh;
-    }
+  section#projects article,
+  section#about article {
+    margin-top: 5vh;
+  }
 
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        margin-bottom: 1vh;
-    }
+  section#projects article div:last-child h3,
+  section#about article div:last-child h3 {
+    margin-bottom: 1vh;
+  }
 
-    footer > div:nth-child(2) div p:nth-child(1) {
-        width: 65px;
-        height: 65px;
-    }
+  footer > div:nth-child(2) div p:nth-child(1) {
+    height: 65px;
+    width: 65px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    section#projects article, 
-    section#about article {
-        margin-top: 10vh;
-    }
+  section#projects article,
+  section#about article {
+    margin-top: 10vh;
+  }
 
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        margin-bottom: 2vh;
-    }
+  section#projects article div:last-child h3,
+  section#about article div:last-child h3 {
+    margin-bottom: 2vh;
+  }
 
-    footer > div:nth-child(2) div p:nth-child(1) {
-        width: 80px;
-        height: 80px;
-    }
+  footer > div:nth-child(2) div p:nth-child(1) {
+    height: 80px;
+    width: 80px;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    section#projects article, 
-    section#about article {
-        margin-top: 10vh;
-    }
+  section#projects article,
+  section#about article {
+    margin-top: 10vh;
+  }
 
-    section#projects article div:last-child h3, 
-    section#about article div:last-child h3 {
-        margin-bottom: 2vh;
-    }
+  section#projects article div:last-child h3,
+  section#about article div:last-child h3 {
+    margin-bottom: 2vh;
+  }
 }
